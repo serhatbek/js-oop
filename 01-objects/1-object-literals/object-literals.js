@@ -12,3 +12,8 @@ const box = {
 };
 
 box.paint();
+
+/**
+ **If an object has one or more methods, we say that object has behavior
+ ** If an object has a method, it's better to use a factory or a constructor for cloning
+ */
