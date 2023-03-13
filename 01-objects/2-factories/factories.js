@@ -1,4 +1,4 @@
-// FACTORY FUNCTION
+//* FACTORY FUNCTION
 
 const book = {
   writer: 'Anne Rice',
@@ -15,12 +15,12 @@ const book = {
 book.getSummary();
 
 /**
- **if the key and the value are same, we can remove value (radius)
+ **if the key and the value are same, we can remove value
  ** if you return an object, it's a factory object
  ** if we use this keyword along with new operator, we refer to that function as a constructor function
  */
 
-// CONSTRUCTOR FUNCTION
+//* CONSTRUCTOR FUNCTION
 
 function Book(title, year, writer) {
   this.title = title;
@@ -35,6 +35,12 @@ function Book(title, year, writer) {
 }
 
 const book1 = new Book('Harry Potter', '2000', 'J.K. Rowling');
+const book2 = new Book(
+  'Harry Potter: Secret Of Chambers',
+  '2002',
+  'J.K. Rowling'
+);
 console.log(book1);
 
 book1.getSummary();
+book2.getSummary();
