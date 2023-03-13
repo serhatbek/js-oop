@@ -1,17 +1,18 @@
 // FACTORY FUNCTION
 
-function createBox(radius) {
-  return {
-    radius,
-    paint: () => {
-      console.log('factorial function, paint');
-    },
-  };
-}
+const book = {
+  writer: 'Anne Rice',
+  date: '1985',
+  title: 'Memnoch',
 
-const box = createBox(2);
+  getSummary: function () {
+    console.log(
+      `The book ${this.title} was written by ${this.writer} in ${this.date}.`
+    );
+  },
+};
 
-box.paint();
+book.getSummary();
 
 /**
  **if the key and the value are same, we can remove value (radius)
@@ -21,13 +22,19 @@ box.paint();
 
 // CONSTRUCTOR FUNCTION
 
-function Box(radius) {
-  this.radius = radius;
-  this.paint = () => {
-    console.log('constructor function, paint');
+function Book(title, year, writer) {
+  this.title = title;
+  this.year = year;
+  this.writer = writer;
+
+  this.getSummary = () => {
+    console.log(
+      `The book ${this.title} was written by ${this.writer} in ${this.year}.`
+    );
   };
 }
 
-const box1 = new Box();
+const book1 = new Book('Harry Potter', '2000', 'J.K. Rowling');
+console.log(book1);
 
-box1.paint();
+book1.getSummary();
